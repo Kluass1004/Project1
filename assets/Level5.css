@@ -1,0 +1,77 @@
+.transition{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: 1px solid black;
+    color: aqua;
+    margin: 10px;
+    /* transition-property: all;
+    transition-duration: 2s;
+   transition-timing-function: steps(5);
+   transition-delay: 1s; */
+   transition: all 2s ease-in-out  1s;
+}
+.transition:hover{
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: black;
+    font-size: 20px;
+}
+.rotate{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    transition: all 2s ease-in-out  1s;
+}
+.rotate:hover{
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: black;
+    font-size: 20px;
+    transform: rotate(360deg);
+    /* transform: scale(2); */
+}
+.translate{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: 1px solid black;
+    color: aqua;
+    margin: 10px;
+    transition: all 1s ease-in-out  1s;
+}
+.translate:hover{
+    transform: translate(50px,50px);
+    /* transform: skew(70deg);  */
+}
+.animations{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    animation-name: animate;
+    position: relative;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes animate {
+    from {background-color: black;left: 100px;}
+    to {background-color: orangered;left: 500px;}
+}
+.loader{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 20px solid #000814;
+    border-top: 20px solid #ffd60a;
+
+    animation: load 3s ease-in 0s infinite normal;
+}
+@keyframes load {
+    from { transform: rotate(0deg);}
+    from { transform: rotate(360deg);}
+}
